@@ -259,6 +259,20 @@ document.getElementById("submitBtn").addEventListener("click",function(){
 
     localStorage.setItem("percentage",percentage);
 
+    // Update dashboard aggregate stats in localStorage
+    const prevAttempts = Number(localStorage.getItem("testsAttempted") || 0);
+    localStorage.setItem("testsAttempted", prevAttempts + 1);
+
+    const prevHighest = Number(localStorage.getItem("highestScore") || 0);
+    if (Number(percentage) > prevHighest) {
+        localStorage.setItem("highestScore", percentage);
+    }
+
+    const attempts = correct + wrong;
+    const accuracy = attempts > 0 ? ((correct / attempts) * 100).toFixed(2) : '0.00';
+    localStorage.setItem("lastAccuracy", accuracy);
+    localStorage.setItem("lastAttempts", attempts);
+
     window.location.href="result.html";
 
 });

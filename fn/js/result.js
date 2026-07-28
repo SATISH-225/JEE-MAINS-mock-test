@@ -1,14 +1,19 @@
-const correct = localStorage.getItem("correct");
-const wrong = localStorage.getItem("wrong");
-const unattempted = localStorage.getItem("unattempted");
-const marks = localStorage.getItem("marks");
-const totalMarks = localStorage.getItem("totalMarks");
-const percentage = localStorage.getItem("percentage");
+const correct = Number(localStorage.getItem("correct") || 0);
+const wrong = Number(localStorage.getItem("wrong") || 0);
+const unattempted = Number(localStorage.getItem("unattempted") || 0);
+const marks = Number(localStorage.getItem("marks") || 0);
+const totalMarks = Number(localStorage.getItem("totalMarks") || 0);
+const percentage = Number(localStorage.getItem("percentage") || 0);
+
+const attempts = correct + wrong; // number of attempted questions
+const accuracy = attempts > 0 ? ((correct / attempts) * 100).toFixed(2) : '0.00';
 
 document.getElementById("scoreText").innerHTML = `
 Correct Answers : ${correct}<br><br>
 Wrong Answers : ${wrong}<br><br>
-Unattempted : ${unattempted}
+Unattempted : ${unattempted}<br><br>
+Attempts : ${attempts}<br><br>
+Accuracy : ${accuracy}%
 `;
 
 document.getElementById("percentageText").innerHTML = `
