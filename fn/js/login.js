@@ -1,4 +1,4 @@
-const API_BASE_URL = 'http://localhost:5000/api/auth';
+const API_BASE_URL = 'https://jee-mains-mock-test.onrender.com/api/auth';
 
 const loginForm = document.getElementById("loginForm");
 if (loginForm) {
