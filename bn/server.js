@@ -11,7 +11,10 @@ dns.setServers(['8.8.8.8', '8.8.4.4']);
 dotenv.config({ path: path.join(__dirname, '.env') });
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: "https://jee-mains-mock-test.vercel.app",
+  credentials: true
+}));
 app.use(express.json());
 
 const dbUrl = process.env.DATABASE_URL;
