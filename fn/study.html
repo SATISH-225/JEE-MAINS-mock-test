@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Study Materials | JEE Smart</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body class="contact-body">
+
+    <!-- Navigation -->
+
+    <nav>
+
+        <div class="logo">JEE Smart</div>
+
+        <ul>
+
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="mocktests.html">Mock Tests</a></li>
+            <li><a href="collegepredictor.html">College Predictor</a></li>
+            <li><a href="contact.html">Contact</a></li>
+
+        </ul>
+
+        <button onclick="location.href='login.html'">
+            Logout
+        </button>
+
+    </nav>
+
+    <!-- Study Section -->
+
+    <section class="study-page">
+
+        <h1 id="title"></h1>
+
+        <div class="study-container">
+
+            <div class="study-card">
+
+                <h2 id="subjectName"></h2>
+
+                <p id="description"></p>
+
+                <div id="notes"></div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <script>
+
+        const params = new URLSearchParams(window.location.search);
+
+        const subject = params.get("subject");
+
+        const title = document.getElementById("title");
+        const subjectName = document.getElementById("subjectName");
+        const description = document.getElementById("description");
+        const notes = document.getElementById("notes");
+
+        if (subject == "physics") {
+
+            title.innerHTML = "📘 Physics Study Material";
+
+            subjectName.innerHTML = "Physics";
+
+            description.innerHTML =
+                "Mechanics, Thermodynamics, Modern Physics, Electricity, Magnetism, Optics and Waves.";
+
+            notes.innerHTML = `
+                <h3>📘 Physics Notes</h3>
+
+                <ul>
+                    <li><a href="test.html?subject=physics">Mechanics</a></li>
+                    <li><a href="test.html?subject=physics">Thermodynamics</a></li>
+                    <li><a href="test.html?subject=physics">Optics</a></li>
+                    <li><a href="test.html?subject=physics">Electronics</a></li>
+                </ul>
+            `;
+
+        }
+
+        else if (subject == "chemistry") {
+
+            title.innerHTML = "🧪 Chemistry Study Material";
+
+            subjectName.innerHTML = "Chemistry";
+
+            description.innerHTML =
+                "Physical Chemistry, Organic Chemistry, Inorganic Chemistry and Chapter-wise Notes.";
+
+            notes.innerHTML = `
+                <h3>🧪 Chemistry Notes</h3>
+
+                <ul>
+                    <li><a href="test.html?subject=chemistry">Physical Chemistry</a></li>
+                    <li><a href="test.html?subject=chemistry">Organic Chemistry</a></li>
+                    <li><a href="test.html?subject=chemistry">Inorganic Chemistry</a></li>
+                    <li><a href="test.html?subject=chemistry">Biomolecules</a></li>
+                </ul>
+            `;
+
+        }
+
+        else if (subject == "mathematics") {
+
+            title.innerHTML = "📐 Mathematics Study Material";
+
+            subjectName.innerHTML = "Mathematics";
+
+            description.innerHTML =
+                "Algebra, Calculus, Coordinate Geometry, Trigonometry, Probability and Vectors.";
+
+            notes.innerHTML = `
+                <h3>📐 Mathematics Notes</h3>
+
+                <ul>
+                    <li><a href="test.html?subject=mathematics">Algebra</a></li>
+                    <li><a href="test.html?subject=mathematics">Calculus</a></li>
+                    <li><a href="test.html?subject=mathematics">Coordinate Geometry</a></li>
+                    <li><a href="test.html?subject=mathematics">Trigonometry</a></li>
+                    <li><a href="test.html?subject=mathematics">Probability</a></li>
+                    <li><a href="test.html?subject=mathematics">Vectors</a></li>
+                </ul>
+            `;
+
+        }
+
+        else {
+
+            title.innerHTML = "Study Materials";
+
+            subjectName.innerHTML = "Select a Subject";
+
+            description.innerHTML = "Please select a subject from the home page.";
+
+            notes.innerHTML = "";
+
+        }
+
+    </script>
+
+    <script src="js/script.js"></script>`r`n</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Predictor</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="contact-body">
+
+<nav>
+
+    <div class="logo">JEE Smart</div>
+
+    <ul>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="mocktests.html">Mock Tests</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+</nav>
+
+<section class="predictor-page">
+
+    <h1>🎓 JEE Main College Predictor</h1>
+
+    <div class="predictor-box">
+
+        <label>Category</label>
+
+        <select id="category">
+
+            <option>OC</option>
+            <option>OBC</option>
+            <option>EWS</option>
+            <option>SC</option>
+            <option>ST</option>
+
+        </select>
+
+        <label>JEE Main Percentile</label>
+
+        <input type="number" id="percentile"
+               placeholder="Enter Percentile">
+
+        <button onclick="predictCollege()">
+            Predict Colleges
+        </button>
+
+    </div>
+
+    <div id="result"></div>
+
+</section>
+
+<script src="js/predictor.js"></script>
+
+    <script src="js/script.js"></script>`r`n</body>
+</html>
