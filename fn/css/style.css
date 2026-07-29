@@ -1202,11 +1202,11 @@ button:hover{
 }
 
 .palette button.active{
-    background:#0d6efd;
+    background:#fd0d0d;
     color:white;
 }
 
 .palette button.answered{
-    background:#28a745;
+    background:#063d25;
     color:white;
 }
