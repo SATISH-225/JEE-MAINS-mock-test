@@ -1202,7 +1202,7 @@ button:hover{
 }
 
 .palette button.active{
-    background:#fd0d0d;
+    background:#a50dfd;
     color:white;
 }
 
